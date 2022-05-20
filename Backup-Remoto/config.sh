@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #Diretório qual deseja fazer o backup
-diretorio_de_backup="${HOME}"
+diretorio_de_backup=""
 
 #Diretório onde será salvo o Backup
 armazenamento_backup="${HOME}/Documentos/Backups"
@@ -13,5 +13,8 @@ arquivo_backup="backup_$format.tar.gz"
 #arquivo de logs
 arquivo_log="/var/log/log-backup.log"
 
+#ssh config
+user=""
+senha=""
 
 
