@@ -43,4 +43,6 @@ function interromper_ssh(){
         echo -e "O SSH foi encerrado!\n"
 }
 
-
+function limpar_tela(){
+	clear
+}
