@@ -52,7 +52,16 @@ while true;do
 			        "f"|"F") limpar_tela
 					 echo "Voltando ao MENU PRINCIPAL" ;;
 		 			 
-			esac
+			esac;;
+		"2") limpar_tela
+		     echo "Qual Computador você deseja conectar?"
+		     cat ips.txt ;;
+	     	"3") Dispositivos_on;;
+		"4") Cadastrar_PC;;
+		"5") Remover_Dispositivo;;
+		"6") Backups_Disponiveis;;
+		"7") echo 'Programa finalizado com sucesso.'
+		     break;;
 	esac
 done
 
