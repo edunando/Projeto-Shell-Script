@@ -1,1 +1,3 @@
 PC-1 eduardo 192.168.0.1
+PC-2 thalita 192.168.0.2
+PC-3 thiago 192.165.4.6
