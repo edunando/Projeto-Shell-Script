@@ -2,7 +2,6 @@
 
 #Dependências
 source ./config.sh
-source ./ips.txt
 source ./ssh_funcs.sh
 source ./funcoes.sh
 
