@@ -7,16 +7,20 @@ function Backups_Disponiveis(){
 	ls -R /home/Documentos/Backups
 }
 
-#Conectar no servidor SSH
+#Conectar no servidor SSH e realizar o backup
 function Realizar_Backup(){
 	clear
+	format=$(date "+%d-%m-%Y")
+	arquivo_backup="backup_$format.tar.gz"
 	cat ips.txt
 	read -p 'Escolha qual PC Deseja realizar o backup: ' pc
-	for i in $(grep "PC-$pc" ips.txt)
-
+	user=$(cat ips.txt | grep PC-$pc | awk '{print $2}')
+	ip=$(cat ips.txt | grep PC-$pc | awk '{print $3}')
 	ssh "$user@$ip" -p 22
-	yes
-	tar -cvf "Backup-$date-$PC"
+	read -p 'Qual pasta você deseja fazer o backup?' pasta
+	backup_compact=$(tar -czvf $arquivo_backup $pasta)
+	scp "$user@$ip:/$pasta" '/home/Documentos/Backups'
+	echo 'Backup Salvo em /home/Documentos/Backups/'
 }
 #Cadastrar computadores disponíveis para backup
 function Cadastrar_PC(){
