@@ -54,8 +54,7 @@ while true;do
 		 			 
 			esac;;
 		"2") limpar_tela
-		     echo "Qual Computador você deseja conectar?"
-		     cat ips.txt ;;
+		     Realizar_Backup;;
 	     	"3") Dispositivos_on;;
 		"4") Cadastrar_PC;;
 		"5") Remover_Dispositivo;;
