@@ -1,7 +1,6 @@
 #!/bin/bash
 
 #Dependências
-source ./config.sh
 source ./ssh_funcs.sh
 source ./funcoes.sh
 
