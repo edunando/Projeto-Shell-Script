@@ -4,7 +4,7 @@
 function Backups_Disponiveis(){
 	clear
 	echo "Backups Disponíveis"
-	ls "${PWD}/Backups/"
+	ls -R "${PWD}/Backups/"
 }
 
 #Conectar no computador cliente via SCP e realizar o backup
