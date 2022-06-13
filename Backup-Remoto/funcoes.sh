@@ -17,7 +17,7 @@ function Realizar_Backup(){
 	user=$(cat ips.txt | grep PC-$pc | awk '{print $2}')
 	ip=$(cat ips.txt | grep PC-$pc | awk '{print $3}')
 	read -p 'Qual pasta você deseja fazer o backup?' pasta
-	mkdir "${PWD}/Backups/PC-$pc/$(basename $pasta)" &> /dev/null
+	mkdir -p "${PWD}/Backups/PC-$pc/$(basename $pasta)" &> /dev/null
 	scp -r "$user@$ip:$pasta" "${PWD}/Backups/PC-$pc/$(basename $pasta)"
 	tar -czvf $arquivo_backup "${PWD}/Backups/PC-$pc/$(basename $pasta)/$(basename $pasta)"
 	clear
